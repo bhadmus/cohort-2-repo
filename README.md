@@ -1,4 +1,4 @@
-## 6 Weeks Intensive Cypress Training
+## 6 Weeks Intensive Cypress Training - Cohort-2
 
 ### Topics Covered
 ---
