@@ -1,0 +1,20 @@
+
+image: cypress/browsers:node-20.9.0-chrome-118.0.5993.88-1-ff-118.0.2-edge-118.0.2088.46-1
+
+pipelines:
+  default:
+    - step:
+        name: "NPM Install and Run Test"
+        script:
+          # install dependencies
+          - npm install
+          # install browserstack-cypress-cli
+          - npx cypress run --browser chrome
+          # # run cypress tests
+          # - npx browserstack-cypress run --nv 18.17.0
+  default-2:
+    - step:
+        name: "Print Result"    
+        script:
+          - echo "Test Passed"
+

@@ -1,0 +1,9 @@
+.vscode/
+.DS_Store
+.idea/
+iframesAndShadowDOM/node_modules/
+oldversion/node_modules/
+redirectAndTab/node_modules/
+shadowDOM/node_modules/
+week-one/node_modules/
+week-two/node_modules/

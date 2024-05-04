@@ -1,0 +1,20 @@
+name: Test Artifact Storage
+
+on: [push]
+
+env:
+    CYPRESS_MAILSLURP_API_KEY: ${{secrets.CYPRESS_MAILSLURP_API_KEY}}
+
+jobs:
+    report-creation:
+        runs-on: ubuntu-latest
+
+        steps:
+        - name: Intialize NPM
+          uses: actions/checkout@v4
+
+        - name: Run Cypress
+          uses: cypress-io/github-action@v6
+          env:
+            CYPRESS_MAILSLURP_API_KEY: ${{env.CYPRESS_MAILSLURP_API_KEY}} 
+        - run: node reporter.js     
