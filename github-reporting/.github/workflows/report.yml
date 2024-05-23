@@ -1,6 +1,9 @@
 name: Test Artifact Storage
 
-on: [push]
+on:
+  push:
+    branches:
+      - main
 
 env:
     CYPRESS_MAILSLURP_API_KEY: ${{secrets.CYPRESS_MAILSLURP_API_KEY}}
@@ -17,4 +20,12 @@ jobs:
           uses: cypress-io/github-action@v6
           env:
             CYPRESS_MAILSLURP_API_KEY: ${{env.CYPRESS_MAILSLURP_API_KEY}} 
-        - run: node reporter.js     
+        - run: node reporter.js   
+        
+        
+        - name: Trigger Cypress Tests
+          uses: peter-evans/repository-dispatch@v2
+          with:
+            token: ${{ secrets.REPO_ACCESS_TOKEN }}
+            repository: bhadmus/duplo-assessment
+            event-type: trigger-tests
