@@ -1,0 +1,28 @@
+{
+    "uuid": "7dfc528f-6a5c-439c-9466-5ee1a1179800",
+    "historyId": "2438413d7c5c7aec1eb8bf8077eee884:d41d8cd98f00b204e9800998ecf8427e",
+    "status": "passed",
+    "stage": "finished",
+    "steps": [],
+    "attachments": [],
+    "parameters": [],
+    "labels": [
+        {
+            "name": "language",
+            "value": "javascript"
+        },
+        {
+            "name": "framework",
+            "value": "cypress"
+        },
+        {
+            "name": "parentSuite",
+            "value": "Test Describe Block"
+        }
+    ],
+    "links": [],
+    "start": 1715834953532,
+    "name": "Lunch a web page",
+    "fullName": "cypress/e2e/test.cy.js#Test Describe Block Lunch a web page",
+    "stop": 1715834960220
+}
