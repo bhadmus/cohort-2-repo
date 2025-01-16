@@ -16,6 +16,7 @@
     "browserstack-cypress-cli": "^1.29.2",
     "cypress": "^13.7.1",
     "cypress-fill-command": "^1.0.2",
-    "cypress-mailslurp": "^1.9.0"
+    "cypress-mailslurp": "^1.9.0",
+    "cypress-split": "^1.24.7"
   }
 }

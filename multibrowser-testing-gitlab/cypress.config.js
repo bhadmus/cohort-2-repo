@@ -1,13 +1,15 @@
 const { defineConfig } = require("cypress");
-const { addCucumberPreprocessorPlugin} = require("@badeball/cypress-cucumber-preprocessor");
+const { addCucumberPreprocessorPlugin } = require("@badeball/cypress-cucumber-preprocessor");
 const browserify = require('@cypress/browserify-preprocessor')
-const {preprendTransformerToOptions} = require("@badeball/cypress-cucumber-preprocessor/browserify");
+const { preprendTransformerToOptions } = require("@badeball/cypress-cucumber-preprocessor/browserify");
+const cypressSplit = require('cypress-split')
 
 async function setupNodeEvents(on, config) {
   await addCucumberPreprocessorPlugin(on, config);
 
-  on('file:preprocessor', 
+  on('file:preprocessor',
     browserify(preprendTransformerToOptions(config, browserify.defaultOptions)));
+  cypressSplit(on, config);
 
   return config
 
