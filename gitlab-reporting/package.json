@@ -16,6 +16,7 @@
     "cypress": "^13.7.1",
     "cypress-fill-command": "^1.0.2",
     "cypress-mailslurp": "^1.9.0",
+    "cypress-split": "^1.24.7",
     "multiple-cucumber-html-reporter": "^3.6.2"
   },
   "cypress-cucumber-preprocessor": {
